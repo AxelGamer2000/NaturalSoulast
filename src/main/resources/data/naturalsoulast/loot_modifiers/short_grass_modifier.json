@@ -1,5 +1,5 @@
 {
-  "type": "naturalsoulast:short_grass_modifier",
+  "type": "minecraft:block",
   "conditions": [
     {
       "condition": "neoforge:loot_table_id",
