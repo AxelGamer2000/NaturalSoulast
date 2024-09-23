@@ -2,7 +2,8 @@
   "type": "naturalsoulast:short_grass_modifier",
   "conditions": [
     {
-      "neoforge:loot_table_id": "minecraft:blocks/dirt"
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:blocks/dirt"
     }
   ],
   "pools": [
