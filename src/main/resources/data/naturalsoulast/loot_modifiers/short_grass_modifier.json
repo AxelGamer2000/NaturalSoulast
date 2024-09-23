@@ -1,11 +1,5 @@
 {
   "type": "minecraft:block",
-  "conditions": [
-    {
-      "condition": "neoforge:loot_table_id",
-      "loot_table_id": "minecraft:blocks/dirt"
-    }
-  ],
   "pools": [
     {
       "rolls": 1,
@@ -74,6 +68,12 @@
               ]
             }
           ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "minecraft:blocks/dirt"
         }
       ]
     }
