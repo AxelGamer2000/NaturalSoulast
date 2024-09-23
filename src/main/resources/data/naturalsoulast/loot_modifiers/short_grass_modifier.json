@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:block",
+  "type": "naturalsoulast:short_grass_modifier",
   "pools": [
     {
       "rolls": 1,
