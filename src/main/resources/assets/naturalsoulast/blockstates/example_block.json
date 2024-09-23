@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "naturalsoulast:block/example_block"
+    }
+  }
+}
