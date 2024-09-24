@@ -36,9 +36,9 @@ public class glmDatagen extends GlobalLootModifierProvider {
 }
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = "naturalsoulast")
-public class glmDatagenHandler {
+class glmDatagenHandler {
     @SubscribeEvent
     public static void onGatherData(GatherDataEvent event) {
-        event.getGenerator().addProvider(event.includeServer(), glmDatagen::new);
+        event.getGenerator().addProvider(event.includeServer(), new glmDatagen(event.getGenerator().getPackOutput(), event.getLookupProvider()));
     }
 }
