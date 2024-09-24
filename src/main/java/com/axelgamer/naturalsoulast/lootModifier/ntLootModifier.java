@@ -38,7 +38,7 @@ public class ntLootModifier extends LootModifier {
 
     @Override
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        generatedLoot.add(Items.DIAMOND.getDefaultInstance());
+        generatedLoot.add(new ItemStack(Items.DIAMOND));
         return generatedLoot;
     }
 
