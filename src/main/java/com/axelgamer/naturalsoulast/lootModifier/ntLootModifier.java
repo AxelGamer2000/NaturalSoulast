@@ -1,11 +1,13 @@
 package com.axelgamer.naturalsoulast.lootModifier;
 
 import com.axelgamer.naturalsoulast.NaturalSoulast;
+import com.google.common.base.Suppliers;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
@@ -17,28 +19,35 @@ import java.util.function.Supplier;
 
 public class ntLootModifier extends LootModifier {
 
-    public static final MapCodec<ntLootModifier> CODEC = RecordCodecBuilder.mapCodec(inst ->
-        LootModifier.codecStart(inst).apply(inst, ntLootModifier::new)
-    );
+    public static Supplier<MapCodec<ntLootModifier>> CODEC = Suppliers.memoize(() -> RecordCodecBuilder.mapCodec((ntLootModifierInstance -> ntLootModifier.codecStart(ntLootModifierInstance)
+            .and(BuiltInRegistries.ITEM.byNameCodec().fieldOf("item").forGetter(ntLootModifierInstance1 -> ntLootModifierInstance1.item))
+            .apply(ntLootModifierInstance, ntLootModifier::new))));
 
-    public ntLootModifier(LootItemCondition[] conditions) {
+    private final Item item;
+
+    public ntLootModifier(LootItemCondition[] conditions, Item item) {
         super(conditions);
+        this.item = item;
     }
 
     public static final DeferredRegister<MapCodec<? extends IGlobalLootModifier>> GLOBAL_LOOT_MODIFIER_SERIALIZERS =
             DeferredRegister.create(NeoForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, NaturalSoulast.MODID);
 
-    public static final Supplier<MapCodec<ntLootModifier>> NT_LOOT_MODIFIER =
-            GLOBAL_LOOT_MODIFIER_SERIALIZERS.register("short_grass_modifier", () -> ntLootModifier.CODEC);
-
     @Override
     public MapCodec<? extends IGlobalLootModifier> codec() {
-        return CODEC;
+        return CODEC.get();
     }
 
     @Override
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        generatedLoot.add(new ItemStack(Items.DIAMOND));
+
+        for (LootItemCondition condition: this.conditions) {
+            if (!condition.test(context)) {
+                return generatedLoot;
+            }
+        }
+
+        generatedLoot.add(new ItemStack(this.item));
         return generatedLoot;
     }
 
