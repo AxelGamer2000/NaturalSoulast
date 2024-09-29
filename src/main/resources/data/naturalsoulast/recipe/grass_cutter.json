@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S W",
+    " I ",
+    "S W"
+  ],
+  "key": {
+    "S": {
+      "item": "naturalsoulast:scissors_blade"
+    },
+    "I": {
+      "item": "minecraft:iron_nugget"
+    },
+    "W": {
+      "item": "naturalsoulast:wooden_finger_ring"
+    }
+  },
+  "result": {
+    "id": "naturalsoulast:grass_cutter"
+  }
+}

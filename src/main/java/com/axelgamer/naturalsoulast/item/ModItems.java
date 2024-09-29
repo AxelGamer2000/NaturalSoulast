@@ -5,11 +5,8 @@ import com.axelgamer.naturalsoulast.block.ModBlocks;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-
-import java.util.function.Supplier;
 
 public class ModItems {
 
@@ -26,5 +23,20 @@ public class ModItems {
     public static final DeferredItem<Item> GRASS_STALK = ITEMS.registerSimpleItem(
       "grass_stalk",
       new Item.Properties()
+    );
+
+    public static final DeferredItem<Item> SCISSORS_BLADE = ITEMS.registerSimpleItem(
+            "scissors_blade",
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<Item> WOODEN_FINGER_RING = ITEMS.registerSimpleItem(
+            "wooden_finger_ring",
+            new Item.Properties()
+    );
+
+    public static final DeferredItem<Item> GRASS_CUTTER = ITEMS.register(
+            "grass_cutter",
+            () -> new GrassCutterItem(new Item.Properties().stacksTo(1))
     );
 }

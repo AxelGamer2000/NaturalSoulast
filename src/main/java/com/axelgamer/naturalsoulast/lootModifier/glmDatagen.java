@@ -25,11 +25,13 @@ public class glmDatagen extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        add("short_grass_modifier", new ntLootModifier(new LootItemCondition[] {
+        add("short_grass_modifier", new shortGrassModifier(new LootItemCondition[] {
                 LootTableIdCondition.builder(ResourceLocation.parse("minecraft:blocks/short_grass")).build(),
-                MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.IRON_SWORD)).build()
-                },
-                ModItems.GRASS_STALK.get()));
+                MatchTool.toolMatches(ItemPredicate.Builder.item().of(ModItems.GRASS_CUTTER.get())).build()},
+                ModItems.GRASS_STALK.get(), true, Items.WHEAT_SEEDS));
+        add("short_grass_modifier_2", new removeModifier(new LootItemCondition[] {
+                LootTableIdCondition.builder(ResourceLocation.parse("minecraft:blocks/short_grass")).build()},
+                Items.WHEAT_SEEDS));
     }
 }
 

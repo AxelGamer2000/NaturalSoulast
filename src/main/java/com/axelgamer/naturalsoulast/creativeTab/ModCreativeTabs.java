@@ -21,6 +21,9 @@ public class ModCreativeTabs {
             .icon(() -> ModItems.GRASS_STALK.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.GRASS_STALK.get());
+                output.accept(ModItems.SCISSORS_BLADE.get());
+                output.accept(ModItems.WOODEN_FINGER_RING.get());
+                output.accept(ModItems.GRASS_CUTTER.get());
             }).build());
 
 }

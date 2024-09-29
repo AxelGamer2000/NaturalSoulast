@@ -8,9 +8,11 @@
     {
       "condition": "minecraft:match_tool",
       "predicate": {
-        "items": "minecraft:iron_sword"
+        "items": "naturalsoulast:grass_cutter"
       }
     }
   ],
-  "item": "naturalsoulast:grass_stalk"
+  "item": "naturalsoulast:grass_stalk",
+  "remove": true,
+  "target": "minecraft:wheat_seeds"
 }
