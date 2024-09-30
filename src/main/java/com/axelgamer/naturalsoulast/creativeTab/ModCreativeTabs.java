@@ -18,12 +18,13 @@ public class ModCreativeTabs {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.naturalsoulast")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ModItems.GRASS_STALK.get().getDefaultInstance())
+            .icon(() -> ModItems.SOUL.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(ModItems.GRASS_STALK.get());
                 output.accept(ModItems.SCISSORS_BLADE.get());
                 output.accept(ModItems.WOODEN_FINGER_RING.get());
                 output.accept(ModItems.GRASS_CUTTER.get());
+                output.accept(ModItems.SOUL.get());
             }).build());
 
 }

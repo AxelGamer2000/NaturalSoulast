@@ -39,4 +39,9 @@ public class ModItems {
             "grass_cutter",
             () -> new GrassCutterItem(new Item.Properties().stacksTo(1))
     );
+
+    public static final DeferredItem<Item> SOUL = ITEMS.registerSimpleItem(
+            "soul",
+            new Item.Properties()
+    );
 }
