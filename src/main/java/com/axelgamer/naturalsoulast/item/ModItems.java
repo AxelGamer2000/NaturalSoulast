@@ -44,4 +44,9 @@ public class ModItems {
             "soul",
             new Item.Properties()
     );
+
+    public static final DeferredItem<Item> EYE_OF_NATURAL_SOUL = ITEMS.registerSimpleItem(
+            "eye_of_natural_soul",
+            new Item.Properties()
+    );
 }

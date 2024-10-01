@@ -25,6 +25,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.WOODEN_FINGER_RING.get());
                 output.accept(ModItems.GRASS_CUTTER.get());
                 output.accept(ModItems.SOUL.get());
+                output.accept(ModItems.EYE_OF_NATURAL_SOUL.get());
             }).build());
 
 }
