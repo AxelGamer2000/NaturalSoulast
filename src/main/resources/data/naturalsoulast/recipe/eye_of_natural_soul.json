@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CGC",
+    "GSG",
+    "CGC"
+  ],
+  "key": {
+    "S": {
+      "item": "naturalsoulast:soul"
+    },
+    "G": {
+      "item": "naturalsoulast:grass_stalk"
+    },
+    "C": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "id": "naturalsoulast:eye_of_natural_soul"
+  }
+}

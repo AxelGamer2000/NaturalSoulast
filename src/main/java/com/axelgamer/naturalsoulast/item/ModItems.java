@@ -49,4 +49,7 @@ public class ModItems {
             "eye_of_natural_soul",
             new Item.Properties()
     );
+
+    //curios api
+
 }
