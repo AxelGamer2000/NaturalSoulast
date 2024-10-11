@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GEG"
+  ],
+  "key": {
+    "G": {
+      "item": "naturalsoulast:grass_stalk"
+    },
+    "E": {
+      "item": "naturalsoulast:eye_of_natural_soul"
+    }
+  },
+  "result": {
+    "id": "naturalsoulast:amulet_of_natural_soul"
+  }
+}

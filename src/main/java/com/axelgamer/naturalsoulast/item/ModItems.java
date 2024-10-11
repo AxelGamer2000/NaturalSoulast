@@ -2,6 +2,7 @@ package com.axelgamer.naturalsoulast.item;
 
 import com.axelgamer.naturalsoulast.NaturalSoulast;
 import com.axelgamer.naturalsoulast.block.ModBlocks;
+import com.axelgamer.naturalsoulast.item.amulets.AmuletOfNaturalSoulItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -50,6 +51,8 @@ public class ModItems {
             new Item.Properties()
     );
 
-    //curios api
-
+    public static final DeferredItem<Item> AMULET_OF_NATURAL_SOUL = ITEMS.register(
+            "amulet_of_natural_soul",
+            () -> new AmuletOfNaturalSoulItem(new Item.Properties())
+    );
 }

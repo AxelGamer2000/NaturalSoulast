@@ -1,11 +1,16 @@
 {
   "block.naturalsoulast.example_block": "Example Block",
 
+  "curios.identifier.amulet": "Amulet",
+
+  "itemGroup.naturalsoulast": "Natural Soulast",
+
   "item.naturalsoulast.example_item": "Example Item",
   "item.naturalsoulast.grass_stalk": "Grass Stalk",
   "item.naturalsoulast.scissors_blade": "Scissors Blade",
   "item.naturalsoulast.wooden_finger_ring": "Wooden Finger Ring",
   "item.naturalsoulast.grass_cutter": "Grass Cutter",
   "item.naturalsoulast.soul": "Soul",
-  "item.naturalsoulast.eye_of_natural_soul": "Eye Of Natural Soul"
+  "item.naturalsoulast.eye_of_natural_soul": "Eye Of Natural Soul",
+  "item.naturalsoulast.amulet_of_natural_soul": "Amulet Of Natural Soul"
 }

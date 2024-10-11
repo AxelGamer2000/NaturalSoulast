@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLL",
+    "LSL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "S": {
+      "tag": "naturalsoulast:living_soul_food"
+    }
+  },
+  "result": {
+    "id": "naturalsoulast:soul"
+  }
+}

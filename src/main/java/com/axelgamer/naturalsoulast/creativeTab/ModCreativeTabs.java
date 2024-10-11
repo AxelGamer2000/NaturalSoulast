@@ -26,6 +26,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.GRASS_CUTTER.get());
                 output.accept(ModItems.SOUL.get());
                 output.accept(ModItems.EYE_OF_NATURAL_SOUL.get());
+                output.accept(ModItems.AMULET_OF_NATURAL_SOUL.get());
             }).build());
 
 }
