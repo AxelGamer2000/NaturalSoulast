@@ -6,6 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -27,6 +28,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.SOUL.get());
                 output.accept(ModItems.EYE_OF_NATURAL_SOUL.get());
                 output.accept(ModItems.AMULET_OF_NATURAL_SOUL.get());
+                output.accept(ModItems.SLINGSHOT.get());
             }).build());
 
 }
