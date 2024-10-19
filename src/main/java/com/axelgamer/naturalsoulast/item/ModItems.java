@@ -5,9 +5,7 @@ import com.axelgamer.naturalsoulast.block.ModBlocks;
 import com.axelgamer.naturalsoulast.item.amulets.AmuletOfNaturalSoulItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -59,8 +57,9 @@ public class ModItems {
             () -> new AmuletOfNaturalSoulItem(new Item.Properties())
     );
 
-    public static final DeferredItem<Item> SLINGSHOT = ITEMS.register(
-            "slingshot",
-            () -> new SlingshotItem(new Item.Properties().durability(200))
+    public static final DeferredItem<Item> PEBBLE = ITEMS.register(
+            "pebble",
+            () -> new PebbleItem(new Item.Properties())
     );
+
 }

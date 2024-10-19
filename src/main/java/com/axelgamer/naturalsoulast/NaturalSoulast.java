@@ -2,6 +2,7 @@ package com.axelgamer.naturalsoulast;
 
 import com.axelgamer.naturalsoulast.block.ModBlocks;
 import com.axelgamer.naturalsoulast.creativeTab.ModCreativeTabs;
+import com.axelgamer.naturalsoulast.entities.ModEntities;
 import com.axelgamer.naturalsoulast.item.ModItems;
 import com.axelgamer.naturalsoulast.lootModifier.ModGLM;
 import com.axelgamer.naturalsoulast.sound.ModSounds;
@@ -56,6 +57,8 @@ public class NaturalSoulast
         ModGLM.LOOT_MODIFIER.register(modEventBus);
 
         ModSounds.SOUND_EVENTS.register(modEventBus);
+
+        ModEntities.ENTITY_TYPE.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (naturalsoulast) to respond directly to events.

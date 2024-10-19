@@ -28,7 +28,7 @@ public class ModCreativeTabs {
                 output.accept(ModItems.SOUL.get());
                 output.accept(ModItems.EYE_OF_NATURAL_SOUL.get());
                 output.accept(ModItems.AMULET_OF_NATURAL_SOUL.get());
-                output.accept(ModItems.SLINGSHOT.get());
+                output.accept(ModItems.PEBBLE.get());
             }).build());
 
 }
