@@ -14,9 +14,10 @@ import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ProjectileItem;
+import net.minecraft.world.item.SnowballItem;
 import net.minecraft.world.level.Level;
 
-public class PebbleItem extends Item{
+public class PebbleItem extends Item implements ProjectileItem{
     public PebbleItem(Properties pProperties) {
         super(pProperties);
     }
@@ -34,7 +35,7 @@ public class PebbleItem extends Item{
                 0.4F / (pLevel.getRandom().nextFloat() * 0.4F + 0.8F)
         );
         if (!pLevel.isClientSide) {
-            Snowball pebble = new Snowball(pLevel, pPlayer);
+            Pebble pebble = new Pebble(pLevel, pPlayer);
             pebble.setItem(itemstack);
             pebble.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
             pLevel.addFreshEntity(pebble);
@@ -43,5 +44,12 @@ public class PebbleItem extends Item{
         pPlayer.awardStat(Stats.ITEM_USED.get(this));
         itemstack.consume(1, pPlayer);
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
+    }
+
+    @Override
+    public Projectile asProjectile(Level pLevel, Position pPos, ItemStack pStack, Direction pDirection) {
+        Pebble pebble = new Pebble(pLevel, pPos.x(), pPos.y(), pPos.z());
+        pebble.setItem(pStack);
+        return pebble;
     }
 }

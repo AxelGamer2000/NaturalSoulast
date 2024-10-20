@@ -59,7 +59,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> PEBBLE = ITEMS.register(
             "pebble",
-            () -> new PebbleItem(new Item.Properties())
+            () -> new PebbleItem(new Item.Properties().stacksTo(16))
     );
 
 }
